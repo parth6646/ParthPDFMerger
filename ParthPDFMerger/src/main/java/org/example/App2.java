@@ -20,7 +20,7 @@ public class App2
             System.out.println("How many PDFs would you like to merge?");
             Scanner userIn = new Scanner(System.in);
             int numPDFs = userIn.nextInt();
-            System.out.println("What would you like to name the merged file? (include .pdf)");
+            System.out.println("What would you like to name the merged file? (include relative path for desired location with .pdf at the end)");
             String name = userIn.next();
             name += userIn.nextLine();
             PDFMergerUtility mergePdf = new PDFMergerUtility();
@@ -34,7 +34,7 @@ public class App2
             }
             mergePdf.setDestinationFileName(name);
             mergePdf.mergeDocuments();
-            System.out.println("Merge completed. Check the folder with this java program to find the file.");
+            System.out.println("Merge completed. Check specified location to find the file.");
         }
         catch(Exception e)
         {
